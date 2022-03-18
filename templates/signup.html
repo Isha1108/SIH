@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    F.O.L.D.
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../static/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../static/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <style>
+    /* HIDE RADIO */
+
+    [type=radio] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* IMAGE STYLES */
+
+    [type=radio]+img {
+      cursor: pointer;
+    }
+
+    /* CHECKED STYLES */
+
+    [type=radio]:checked+img {
+      outline: 2px solid #71F7AF;
+    }
+  </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  <!-- Navbar -->
+  <nav
+    class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent mt-4">
+    <div class="container">
+      <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="../pages/dashboards/default.html">
+        F.O.L.D.
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+
+
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <section class="min-vh-100 mb-8">
+    <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
+      style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 text-center mx-auto">
+            <h1 class="text-white mb-2 mt-5">Welcome!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row mt-lg-n10 mt-md-n11 mt-n10">
+        <div class="col-xl-4 col-lg-5 col-md-7 mx-auto">
+          <div class="card z-index-0">
+            <div class="card-header text-center pt-4">
+              <h5>Register with</h5>
+            </div>
+            <div class="row px-xl-5 px-sm-4 px-3">
+              <div class="mt-2 position-relative text-center">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="mb-3" style="text-align: center;">
+                <button onclick="window.location.href='{{ url_for( 'd_signup' ) }}';" style="display: inline-block; padding: 0; border: none; background: none;"><img src="../static/assets/img/doctor-character.jpg" alt="" style="width: 90px;"><p>Doctor</p></button>
+                      
+                      
+                      
+
+                      <button onclick="myFunction()" style="display: inline-block; padding: 0; border: none; background: none;"><img src="../static/assets/img/patient-character.jpg" alt="" style="width: 90px;"><p>Student</p></button>
+                      <script>
+                        function myFunction() {
+                          location.replace("/student_signup")
+                        }
+                        </script>
+                      
+                  </div>
+              <form method="post" action="{{url_for('student_signup')}}">
+                <!-- <div class="mb-3" style="text-align: center;">
+                  <label>
+                    <input type="radio" class="form-control" name="category" value="Doctor" checked>                    
+                  </label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <label>
+                    <input type="radio" class="form-control" name="category" value="Patient">
+                    <button><img src="../static/assets/img/patient-character.jpg" alt="" style="width: 90px;"></button>
+                    <p>Student</p>
+                  </label>
+                </div> -->
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="s_name" placeholder="Student Name" aria-label="Name"
+                    aria-describedby="email-addon">
+                </div>
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="age" placeholder="Age of Student" aria-label="Name"
+                    aria-describedby="email-addon">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="school" placeholder="School of Student" aria-label="Email"
+                    aria-describedby="email-addon">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="p_name" placeholder="Name of Parent" aria-label="Password"
+                    aria-describedby="password-addon">
+                </div>
+                <div class="form-check form-check-info text-left">
+
+
+                <div class="mb-3">
+                  <input type="email" class="form-control" name="p_email" placeholder="Email of Parent" aria-label="Email"
+                    aria-describedby="email-addon">
+                </div>
+
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="p_phone" placeholder="Phone Number of Parent" aria-label="Password"
+                    aria-describedby="password-addon">
+                </div>
+                <div class="mb-3">
+                  <input type="password" class="form-control" name="password" placeholder="Set a Password" aria-label="Password"
+                    aria-describedby="password-addon">
+                </div>
+
+                <div class="text-center">
+                  <input  class="btn bg-gradient-dark w-100 my-4 mb-2" type="submit">
+                  <!-- <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button> -->
+                </div>
+
+                <p class="text-sm mt-3 mb-0">Already have an account? <a href="/student_login"
+                    class="text-dark font-weight-bolder">Sign in</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer py-5">
+
+  </footer>
+
+  <script src="../static/assets/js/core/popper.min.js"></script>
+  <script src="../static/assets/js/core/bootstrap.min.js"></script>
+  <script src="../static/assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../static/assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../static/assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+</body>
+
+</html>
